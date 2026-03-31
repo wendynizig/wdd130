@@ -1,15 +1,71 @@
-nav{
-    background-color: darkblue;
-    padding: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav a{
-    color: white;
+
+:root {
+    --border: 1px solid rgb(0, 0, 0, 0.2);
+    --box-padding: .5rem;
+    --text-align: center;
+    --image-width: 150px;
+    --main-font: 'Segoe UI', sans-serif;
+    --main-font-size: 1rem;
+}
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: steelblue;
+    padding: var(--box-padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
     display: block;
-    padding: 20px;
+    padding: var(--box-padding);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 h1{
     color: darkblue;
+    font-family: var(--main-font);
+    font-weight: 350;
+    padding: var(--box-padding);
+    border-bottom: 1px solid #333;
 }
+
+/* Main Element */
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+aside {
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 /0.1);
+    text-align: center;
+}
+
 main img{
     width: 150px;
     height: auto;
@@ -20,24 +76,66 @@ main img{
 main {
   max-width: 840px;
 }
-aside {
-  width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
-  text-align: center;
-}
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    color: #ddd;
+
+  }
 aside img {
   width: 200px;
   height: auto; 
 }
 p {
-  padding: 0;
+    padding: var(--box-padding);
+    font-family: var(--main-font);
 }
 footer {
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
 }
+header, footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+nav {
+  background-color: steelblue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  align-items: center;
+}
+    
+main {
+  grid-column: 2/3;
+  margin: 1rem;
+}
+    
+
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+/* 
+aside {
+  width: 20rem;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+} */
